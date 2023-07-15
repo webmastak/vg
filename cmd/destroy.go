@@ -12,6 +12,17 @@ import (
 	"github.com/spf13/cobra"
 )
 
+// Recursively change permissions
+func ChmodR(path string, mode os.FileMode) error {
+	return filepath.Walk(path, func(name string, info os.FileInfo, err error) error {
+		if err == nil {
+			err = os.Chmod(name, mode)
+		}
+
+		return err
+	})
+}
+
 // destroyCmd represents the destroy command
 var destroyCmd = &cobra.Command{
 	Use:   "destroy [workspaces...]",
@@ -35,6 +46,7 @@ any arguments:
 		for _, wsName := range args {
 			fmt.Printf("Destroying workspace %q\n", wsName)
 			ws := workspace.New(wsName)
+			ChmodR(ws.Path(), 0755)
 			err := ws.ClearSrc()
 			if err != nil {
 				return err
