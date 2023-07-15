@@ -4,7 +4,7 @@ go:
   - 1.13.x
 
 before_install:
-  - go get github.com/GetStream/vg
+  - go get github.com/webmastak/vg
   - go get github.com/golang/dep/cmd/dep
   - 'eval "$(vg eval --shell bash)"'
   - vg init
@@ -34,5 +34,5 @@ deploy:
   file_glob: true
   skip_cleanup: true # make sure travis doesn't cleanup needed files
   on:
-    repo: GetStream/vg
+    repo: webmastak/vg
     tags: true

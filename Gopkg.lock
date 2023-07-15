@@ -69,7 +69,7 @@
   ]
   pruneopts = ""
   revision = "a0ff2567cfb70903282db057e799fd826784d41d"
-  source = "github.com/GetStream/go-bindata"
+  source = "github.com/webmastak/go-bindata"
 
 [[projects]]
   digest = "1:1ce378ab2352c756c6d7a0172c22ecbd387659d32712a4ce3bc474273309a5dc"
@@ -193,7 +193,7 @@
   ]
   pruneopts = ""
   revision = "eccae071a38f965151ef2aebec8784b60e2a6c7b"
-  source = "github.com/GetStream/testify"
+  source = "github.com/webmastak/testify"
 
 [[projects]]
   branch = "master"

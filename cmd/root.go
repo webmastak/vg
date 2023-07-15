@@ -44,7 +44,7 @@ fully missing when using a vendor directory.
 
 Below is an example of the 'vg' command in action. For more info see detailed
 command info at 'vg help <command>' or look at the README on Github:
-https://github.com/GetStream/vg/blob/master/README.md
+https://github.com/webmastak/vg/blob/master/README.md
 
 To start using virtualgo for a project run the following:
 

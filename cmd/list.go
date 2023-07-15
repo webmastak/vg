@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/GetStream/vg/internal/utils"
+	"github.com/webmastak/vg/internal/utils"
 	"github.com/spf13/cobra"
 )
 

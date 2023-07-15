@@ -147,10 +147,10 @@ __vg_upgrade() {
     fi
 
     echo Updating virtualgo
-    go get -u github.com/GetStream/vg
+    go get -u github.com/webmastak/vg
 
     echo Reloading the shell part of virtualgo
-    go get -u github.com/GetStream/vg
+    go get -u github.com/webmastak/vg
     __vg_reload
 
     if [ -n "$old_virtualgo" ] && [ "$VIRTUALGO" != "$old_virtualgo" ]; then

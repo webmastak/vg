@@ -4,7 +4,7 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/GetStream/vg/internal/testsuite"
+	"github.com/webmastak/vg/internal/testsuite"
 )
 
 type Suite struct {

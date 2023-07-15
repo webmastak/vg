@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/GetStream/vg/internal/workspace"
+	"github.com/webmastak/vg/internal/workspace"
 	"github.com/spf13/cobra"
 )
 

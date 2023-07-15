@@ -4,7 +4,7 @@ GO_FILES = $(shell find . -name "*.go" | grep -v "^./vendor/" |grep -v "_test.go
 BIN ?= vg
 BIN_PACKAGE = .
 
-REPO=github.com/GetStream/vg
+REPO=github.com/webmastak/vg
 
 RELEASE_DIR = releases
 
@@ -95,7 +95,7 @@ release-all: $(DEPS)
 
 release: $(DEPS)
 	mkdir -p $(RELEASE_DIR)
-	go build $(BUILD_FLAGS) -ldflags="-w -s -X github.com/GetStream/vg/cmd.Version=`git describe`" -o "$(RELEASE_DIR)/$(BIN)-`go env GOOS`-`go env GOARCH`" $(BIN_PACKAGE)
+	go build $(BUILD_FLAGS) -ldflags="-w -s -X github.com/webmastak/vg/cmd.Version=`git describe`" -o "$(RELEASE_DIR)/$(BIN)-`go env GOOS`-`go env GOARCH`" $(BIN_PACKAGE)
 
 clean:
 	rm $(BINDATA)

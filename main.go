@@ -2,7 +2,7 @@
 
 package main
 
-import "github.com/GetStream/vg/cmd"
+import "github.com/webmastak/vg/cmd"
 
 func main() {
 	cmd.Execute()

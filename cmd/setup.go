@@ -9,7 +9,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/GetStream/vg/internal/utils"
+	"github.com/webmastak/vg/internal/utils"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 )

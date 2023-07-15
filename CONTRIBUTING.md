@@ -4,8 +4,8 @@ The simplest way to develop virtualgo is by using virtualgo. The initial setup
 is simple:
 
 ```
-go get github.com/GetStream/vg
-cd $GOPATH/src/github.com/GetStream/vg
+go get github.com/webmastak/vg
+cd $GOPATH/src/github.com/webmastak/vg
 vg init
 ```
 

@@ -2,7 +2,7 @@
 
 
 
-# virtualgo [![Build Status](https://travis-ci.org/GetStream/vg.svg?branch=master)](https://travis-ci.org/GetStream/vg) [![codecov](https://codecov.io/gh/GetStream/vg/branch/master/graph/badge.svg)](https://codecov.io/gh/GetStream/vg) [![Go Report Card](https://goreportcard.com/badge/github.com/GetStream/vg)](https://goreportcard.com/report/github.com/GetStream/vg)
+# virtualgo [![Build Status](https://travis-ci.org/webmastak/vg.svg?branch=master)](https://travis-ci.org/webmastak/vg) [![codecov](https://codecov.io/gh/webmastak/vg/branch/master/graph/badge.svg)](https://codecov.io/gh/webmastak/vg) [![Go Report Card](https://goreportcard.com/badge/github.com/webmastak/vg)](https://goreportcard.com/report/github.com/webmastak/vg)
 
 Virtualgo (or `vg` for short) is a tool which provides workspace based
 development for Go. Its main feature set that makes it better than other
@@ -28,7 +28,7 @@ use than `virtualenv`, because there's almost no mental overhead in using `vg`.
 
 ### Go Modules
 
-The Go community is now using Go Modules to handle dependencies. This project is now mostly unmaintained. Please read more about this [here](https://getstream.io/blog/virtual-go-to-go-modules/).
+The Go community is now using Go Modules to handle dependencies. This project is now mostly unmaintained. Please read more about this [here](https://webmastak.io/blog/virtual-go-to-go-modules/).
 
 ## Example usage
 
@@ -36,7 +36,7 @@ Below is an example showing some basic usage of `vg`. See further down and `vg h
 for more information and examples.
 
 ```bash
-$ cd $GOPATH/src/github.com/GetStream/example
+$ cd $GOPATH/src/github.com/webmastak/example
 $ vg init  # initial creation of workspace
 
 # Now all commands will be executed from within the example workspace
@@ -45,7 +45,7 @@ $ vg init  # initial creation of workspace
 (example) $ vg deactivate
 
 $ cd ~
-$ cd $GOPATH/src/github.com/GetStream/example
+$ cd $GOPATH/src/github.com/webmastak/example
 (example) $ # The workspace is now activated automatically after cd-ing to the project directory
 ```
 
@@ -85,7 +85,7 @@ now:
 First install the package:
 
 ```bash
-go get -u github.com/GetStream/vg
+go get -u github.com/webmastak/vg
 ```
 
 Although not required, it is recommended to install
@@ -152,7 +152,7 @@ The following commands are the main commands to use `vg`:
 ```bash
 # The first command to use is the one to create and activate a workspace named
 # after the current direcory
-$ cd $GOPATH/src/github.com/GetStream/example
+$ cd $GOPATH/src/github.com/webmastak/example
 $ vg init
 (example) $
 # This command also links the current directory to the created workspace. This
@@ -187,9 +187,9 @@ $ vg activate
 # instance when you are fixing a bug in a dependency and want to test the fix.
 # In these cases you can easily install a package from your global GOPATH
 # into the workspace:
-(example) $ vg localInstall github.com/GetStream/utils
+(example) $ vg localInstall github.com/webmastak/utils
 # You can even install a package from a specific path:
-(example) $ vg localInstall github.com/GetStream/utils ~/weird/path/utils
+(example) $ vg localInstall github.com/webmastak/utils ~/weird/path/utils
 
 # You can also uninstall a package from your workspace again
 (example) $ vg uninstall github.com/spf13/cobra
@@ -323,7 +323,7 @@ If you have [`bindfs`](http://bindfs.org/) installed the issues you will run
 into are only a slight inconvenience, for which easy workarounds exist. However,
 it is important that you know about them, because they will probably cause
 confusion otherwise. If you run into any other issues than the ones mentioned
-here, [please report them](https://github.com/GetStream/vg/issues/new).
+here, [please report them](https://github.com/webmastak/vg/issues/new).
 
 ##### Relative packages in commands
 
@@ -331,7 +331,7 @@ The first set of issues happen when using relative reference to packages in
 commands. Some examples of this are:
 
 - `go list ./...` will return weirdly formatted paths, such
-  as `_/home/stream/go/src/github.com/GetStream/vg`.
+  as `_/home/stream/go/src/github.com/webmastak/vg`.
 - `go test ./...`, might cause an `init` function to be executed twice.
 - `go build ./...` won't work when an `internal` package is present in the
   directory. Here you can expect an error saying `use of internal package not
@@ -343,11 +343,11 @@ So for the `vg` repo you would use the following alternatives:
 
 ```bash
 # go list ./...
-go list github.com/GetStream/vg/...
+go list github.com/webmastak/vg/...
 # go test ./...
-go test github.com/GetStream/vg/...
+go test github.com/webmastak/vg/...
 # go build ./...
-go build github.com/GetStream/vg/...
+go build github.com/webmastak/vg/...
 ```
 
 ##### `dep` commands
@@ -375,7 +375,7 @@ The reason for this is that go tooling does not like symbolic links in `GOPATH`
 
 Compiling will still work, but `go list github.com/...` will not list your
 package. Other than that there are also issues when using `delve`
-([#11](https://github.com/GetStream/vg/issues/11)). Because of these issues it
+([#11](https://github.com/webmastak/vg/issues/11)). Because of these issues it
 is NOT RECOMMENDED to use virtualgo in full isolation mode without `bindfs`
 installed.
 
@@ -412,4 +412,4 @@ MIT
 
 Would you like to work on cool projects like this? We are currently hiring for
 talented Gophers in Amsterdam and Boulder, get in touch with us if you are
-interested! tommaso@getstream.io
+interested! tommaso@webmastak.io
