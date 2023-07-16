@@ -1,4 +1,4 @@
-module vg
+module github.com/webmastak/vg
 
 go 1.20
 

@@ -6,6 +6,7 @@ package cmd
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 
 	"github.com/webmastak/vg/internal/workspace"
 	"github.com/pkg/errors"

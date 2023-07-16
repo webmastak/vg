@@ -87,7 +87,7 @@ required = [
 
 [[constraint]]
   branch = "master"
-  source = "github.com/webmastak/go-bindata"
+  source = "github.com/GetStream/go-bindata"
   name = "github.com/jteeuwen/go-bindata"
 
 [[constraint]]
@@ -106,9 +106,9 @@ required = [
 [[constraint]]
   branch = "subtest-helper"
   name = "github.com/stretchr/testify"
-  source = "github.com/webmastak/testify"
+  source = "github.com/GetStream/testify"
 
 [[override]]
   branch = "subtest-helper"
   name = "github.com/stretchr/testify"
-  source = "github.com/webmastak/testify"
+  source = "github.com/GetStream/testify"
