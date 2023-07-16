@@ -4,6 +4,8 @@
 
 # virtualgo [![Build Status](https://travis-ci.org/webmastak/vg.svg?branch=master)](https://travis-ci.org/webmastak/vg) [![codecov](https://codecov.io/gh/webmastak/vg/branch/master/graph/badge.svg)](https://codecov.io/gh/webmastak/vg) [![Go Report Card](https://goreportcard.com/badge/github.com/webmastak/vg)](https://goreportcard.com/report/github.com/webmastak/vg)
 
+This [`package fork`](https://github.com/GetStream/vg) with fix to remove modules from workspace with permission error.
+
 Virtualgo (or `vg` for short) is a tool which provides workspace based
 development for Go. Its main feature set that makes it better than other
 solutions is as follows:
